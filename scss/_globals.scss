@@ -1,8 +1,6 @@
-@forward "./variables";
 @forward './font';
 @forward './mixins';
 @use './font' as f;
-@use './variables' as v;
 @use './mixins' as m;
 
 
@@ -16,15 +14,4 @@ a{text-decoration:none;}
     transition: 5s all ease-in-out;
 }
 
-h1 {
-    @include m.font($s : 40px, $f: notob, $c: m.$tblack);
-}
-
-h2 {
-    @include m.font($s : 24px, $f: notob, $c: m.$tblack);
-}
-
-p {
-    @include m.font($s : 16px, $f: noto, $c: m.$tblack);
-}
 

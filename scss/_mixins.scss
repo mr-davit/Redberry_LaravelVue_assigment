@@ -55,30 +55,19 @@
     word-break: $wbreak;
   }
 
-  @mixin font($s, $f: noto, $c:$twhite,$w:400) {
+  @mixin fontN($s, $f: Nunito, $c,$w:400) {
     font-size: $s;
     font-family: $f;
     color: $c;
     font-weight: $w;
   }
-  @mixin fonts($s:16px, $f: noto, $c:$twhite,$w:400) {
+  @mixin fontO($s, $f:Open Sans, $c,$w:400) {
     font-size: $s;
     font-family: $f;
     color: $c;
     font-weight: $w;
   }
-  @mixin fontm($s:24px, $f: noto, $c:$twhite,$w:400) {
-    font-size: $s;
-    font-family: $f;
-    color: $c;
-    font-weight: $w;
-  }
-  @mixin fontl($s:40px, $f: noto, $c:$twhite,$w:400) {
-    font-size: $s;
-    font-family: $f;
-    color: $c;
-    font-weight: $w;
-  }
+
 
   @mixin hover {
 
