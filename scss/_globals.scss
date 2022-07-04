@@ -1,0 +1,30 @@
+@forward "./variables";
+@forward './font';
+@forward './mixins';
+@use './font' as f;
+@use './variables' as v;
+@use './mixins' as m;
+
+
+
+*{margin:0; padding:0; list-style:none; box-sizing: border-box;
+    color: black;}
+a{text-decoration:none;}
+
+.block {
+    display: block !important;
+    transition: 5s all ease-in-out;
+}
+
+h1 {
+    @include m.font($s : 40px, $f: notob, $c: m.$tblack);
+}
+
+h2 {
+    @include m.font($s : 24px, $f: notob, $c: m.$tblack);
+}
+
+p {
+    @include m.font($s : 16px, $f: noto, $c: m.$tblack);
+}
+

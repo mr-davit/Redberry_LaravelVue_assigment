@@ -1,0 +1,111 @@
+
+
+@mixin flex($justify: center, $align: center, $direct: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direct;
+  }
+  @mixin flexh($justify: center, $align: center, $direct: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direct;
+  }
+  @mixin flexv($justify: flex-start, $align: center, $direct: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direct;
+  }
+  @mixin flexc($justify: center, $align: center, $direct: column) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direct;
+  }
+
+  @mixin abefore {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;  
+  }
+  
+  @mixin bgimg($w:100%,$h:100%,$fit:cover, $pos:center, $rep:no-repeat,$size:cover) { 
+  
+    width: $w;
+    height: $h;
+    object-fit: $fit;
+    background-position: $pos;
+    background-repeat: $rep;
+    background-size: $size;
+  }
+
+  @mixin border($c:$gold, $s:2px, $t:solid){
+    border-bottom: $c $s $t;
+  }
+
+  @mixin p($over:hidden, $maxh:70%, $wbreak:break-all,) { 
+  
+    overflow: $over; 
+    max-height: $maxh;
+    word-break: $wbreak;
+  }
+
+  @mixin font($s, $f: noto, $c:$twhite,$w:400) {
+    font-size: $s;
+    font-family: $f;
+    color: $c;
+    font-weight: $w;
+  }
+  @mixin fonts($s:16px, $f: noto, $c:$twhite,$w:400) {
+    font-size: $s;
+    font-family: $f;
+    color: $c;
+    font-weight: $w;
+  }
+  @mixin fontm($s:24px, $f: noto, $c:$twhite,$w:400) {
+    font-size: $s;
+    font-family: $f;
+    color: $c;
+    font-weight: $w;
+  }
+  @mixin fontl($s:40px, $f: noto, $c:$twhite,$w:400) {
+    font-size: $s;
+    font-family: $f;
+    color: $c;
+    font-weight: $w;
+  }
+
+  @mixin hover {
+
+    opacity: 0.9;
+    box-shadow: 0px 2px 10px -3px rgba(0,0,0,0.18);
+    cursor: pointer;
+    
+  }
+
+  @mixin sm($max:767px) {
+    @media (max-width: $max) { @content; }
+  }
+  @mixin md($min:768px, $max:1023px) {
+    @media (min-width: $min) and (max-width: $max) { @content; }
+  }
+  @mixin xl($min:1024px) {
+    @media (min-width: $min) { @content; }
+  }
+
+
+  // VARIABLES
+
+  
+$tblack: #0F0F0F;
+
+$twhite: #F9F9F9;
+
+$gold: #E9B859;
+
+

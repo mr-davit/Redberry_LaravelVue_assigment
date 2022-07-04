@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'fajardo';
+    src: url('/fonts/James\ Fajardo.ttf');
+    font-weight: 400;
+    font-style: normal;
+  }
+@font-face {
+  font-family: 'noto';
+  src: url(/fonts/NotoSans-Medium.ttf);
+
+}
+
+@font-face {
+  font-family: 'notob';
+  src: url(/fonts/NotoSans-Bold.ttf);
+
+}
+@font-face {
+  font-family: 'notol';
+  src: url(/fonts/NotoSans-Light.ttf);
+
+}
+  
+h1 {
+  font-family: 'notob';
+  
+}
+
+p {
+  font-family: 'noto';
+
+}
