@@ -1,0 +1,43 @@
+@use './_globals.scss' as g;
+@use './_header.scss';
+
+.page_container{
+    display: flex;
+    .left_side{
+
+        .landing{
+            @include g.bgimg;
+            background-image: url("/resources/img/reg_cont.png");
+            height: calc(100vh - 84px);
+
+            &_txt {
+                padding: 211px 0 0 132px;
+                h1{
+                    font-family: 'Nunito';
+                    font-style: italic;
+                    font-weight: 800;
+                    font-size: 26px;
+                    line-height: 35px;
+                    text-transform: uppercase;
+                }
+                p{
+                    padding-top: 24px;
+                    font-family: 'Nunito';
+                    font-style: italic;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 33px;
+                    /* identical to box height */
+
+                    text-transform: uppercase;
+
+                    color: #E5E6E8;
+                }
+            }
+        }
+    }
+
+    .right_side{
+
+    }
+}
