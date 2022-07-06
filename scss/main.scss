@@ -1,18 +1,9 @@
 @use './_globals.scss' as g;
+@use './_header.scss';
 
 .page_container{
     display: flex;
     .left_side{
-
-        header{
-            width: 923px;
-            height: 84px;
-            background-color: #7025FB;
-            @include g.flex($justify:flex-start);
-            img {
-                margin-left:60px; 
-            }
-        }
 
         .landing{
             @include g.bgimg;

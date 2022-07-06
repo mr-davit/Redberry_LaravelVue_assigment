@@ -1,0 +1,305 @@
+h1 {
+  font-family: "Nunito", sans-serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.block {
+  display: block !important;
+  transition: 5s all ease-in-out;
+}
+
+.none {
+  display: none !important;
+}
+
+header {
+  width: 923px;
+  height: 84px;
+  background-color: #7025FB;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+header img {
+  margin-left: 60px;
+}
+
+.page_container {
+  display: flex;
+}
+.page_container .left_side .landing {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/resources/img/reg_cont.png");
+  height: calc(100vh - 84px);
+}
+.page_container .left_side .landing_txt {
+  padding: 211px 0 0 132px;
+}
+.page_container .left_side .landing_txt h1 {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+.page_container .left_side .landing_txt p {
+  padding-top: 24px;
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  /* identical to box height */
+  text-transform: uppercase;
+  color: #E5E6E8;
+}
+.page_container .right_side header {
+  width: 997px;
+  border: 1px solid rgba(185, 180, 196, 0.3);
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+.page_container .right_side header p {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  /* identical to box height, or 24px */
+  text-transform: capitalize;
+  padding-left: 48px;
+}
+.page_container .right_side .reg_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 48px;
+  width: 775px;
+  height: calc(100vh - 84px);
+  position: relative;
+}
+.page_container .right_side .reg_container #error {
+  position: absolute;
+  width: 350px;
+  height: 87px;
+  top: 150px;
+  right: -130px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.page_container .right_side .reg_container #error td {
+  vertical-align: middle;
+  line-height: 20px;
+  text-indent: 10px;
+}
+.page_container .right_side .reg_container #error #error_type {
+  border-bottom: 1px solid rgba(185, 180, 196, 0.3);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.page_container .right_side .reg_container #error #error_type #error_exp {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: red;
+}
+.page_container .right_side .reg_container #error #error_solve {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+.page_container .right_side .reg_container .navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 366px;
+  position: relative;
+}
+.page_container .right_side .reg_container .navigation .line {
+  position: absolute;
+  width: 47%;
+  height: 50%;
+  border-bottom: 1px solid rgba(185, 180, 196, 0.3);
+  top: 4%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+}
+.page_container .right_side .reg_container .navigation .nav_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 65px;
+}
+.page_container .right_side .reg_container .navigation .nav_box .nav_anc {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #E5E6E8;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background-color: white;
+  z-index: 100;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+}
+.page_container .right_side .reg_container .navigation .nav_box .nav_par {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+.page_container .right_side .reg_container .navigation #experience_anc {
+  background-color: #F5F5F5;
+  color: #95939A;
+}
+.page_container .right_side .reg_container .reg_title {
+  height: auto;
+}
+.page_container .right_side .reg_container .reg_title h1 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 150%;
+}
+.page_container .right_side .reg_container .reg_title p {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: capitalize;
+  color: #95939A;
+}
+.page_container .right_side .reg_container .reg_form {
+  width: 100%;
+}
+.page_container .right_side .reg_container .reg_form .success::after {
+  content: url("/resources/svg/check.svg");
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+.page_container .right_side .reg_container .reg_form .form_control {
+  margin-bottom: 30px;
+  position: relative;
+}
+.page_container .right_side .reg_container .reg_form .form_control .error {
+  background-color: #FFEFEF;
+  color: #DC3545;
+}
+.page_container .right_side .reg_container .reg_form .form_control input {
+  all: unset;
+  height: 40px;
+  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.125);
+  border-bottom: 1px solid rgba(185, 180, 196, 0.3);
+  outline: none;
+  width: 100%;
+  background-color: white;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  text-indent: 10px;
+}
+.page_container .right_side .reg_container .reg_form .form_control input:not(:-moz-placeholder-shown) ~ label {
+  z-index: -1;
+}
+.page_container .right_side .reg_container .reg_form .form_control input:not(:-ms-input-placeholder) ~ label {
+  z-index: -1;
+}
+.page_container .right_side .reg_container .reg_form .form_control input:focus ~ label,
+.page_container .right_side .reg_container .reg_form .form_control input:not(:placeholder-shown) ~ label {
+  z-index: -1;
+}
+.page_container .right_side .reg_container .reg_form .form_control label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  visibility: visible;
+}
+.page_container .right_side .reg_container .reg_form .form_control label::after {
+  content: "*";
+  color: red;
+}
+.page_container .right_side .reg_container .reg_form .error {
+  color: #DC3545;
+}
+.page_container .right_side .reg_container .buttons {
+  width: 100%;
+  margin-top: 88px;
+  display: flex;
+  justify-content: space-between;
+}
+.page_container .right_side .reg_container .buttons a, .page_container .right_side .reg_container .buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: #212529 solid 1px;
+  width: 191px;
+  height: 53px;
+  text-align: center;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  text-transform: capitalize;
+}
+.page_container .right_side .reg_container .buttons #next {
+  background-color: #212529;
+  color: #fff;
+}
+.page_container .right_side .reg_container .buttons #next img {
+  height: 20px;
+  padding-left: 15px;
+}
+.page_container .right_side .reg_container .buttons #next:hover {
+  border: 4px solid rgba(194, 165, 249, 0.8);
+  box-sizing: border-box;
+}/*# sourceMappingURL=registration.css.map */

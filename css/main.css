@@ -23,10 +23,11 @@ a {
   transition: 5s all ease-in-out;
 }
 
-.page_container {
-  display: flex;
+.none {
+  display: none !important;
 }
-.page_container .left_side header {
+
+header {
   width: 923px;
   height: 84px;
   background-color: #7025FB;
@@ -35,8 +36,12 @@ a {
   align-items: center;
   flex-direction: row;
 }
-.page_container .left_side header img {
+header img {
   margin-left: 60px;
+}
+
+.page_container {
+  display: flex;
 }
 .page_container .left_side .landing {
   width: 100%;

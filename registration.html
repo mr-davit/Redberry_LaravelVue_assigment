@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redberry Knight Cup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="/css/registration.css">
+</head>
+
+<body>
+    
+<div class="page_container">
+    <div class="left_side">
+        <header>
+                <a href="/index.html"><img src="/resources/svg/logo.svg" alt=""></a>
+        </header>
+
+        <div class="landing">
+            <div class="landing_txt">
+                <h1>“When you see a good move,
+                   <br> look for a better one.”</h1>
+                <p>-Emanuel Lasker</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="right_side">
+        <header>
+            <p>Start creating your account</p>
+        </header>
+        <div class="reg_container">
+
+            <table class="error_window none" id="error">
+                <tbody>
+                <tr> 
+                <td id="error_type"><img src="/resources/svg/error.svg" alt=""> <p id="error_exp">kargi</p> <br></td>
+                </tr>
+                <tr>
+                <td id="error_solve"></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="navigation">
+
+                <div class=" nav_box personal">
+                    <a id="personal_anc" class="nav_anc" href="/registration.html">1</a>
+                    <p class="nav_par">Personal information</p>
+                </div>
+
+                <div class="line"></div>
+
+                <div class=" nav_box experiance">
+                    <a id="experience_anc" class="nav_anc" href="/experience.html">2</a>
+                    <p class="nav_par">Chess experience</p>
+                </div>
+            </div>
+
+            <div class="reg_title">
+                <h1>Personal information</h1>
+                <p>This is basic informaton fields</p>
+            </div>
+
+            <form action="" class="reg_form" id="reg_form">
+
+                <div class="form_control ">
+                    <input class="" placeholder=" "  type="text" name="username" id="username">
+                    <label id="username_label" for="username">Name</label>
+  
+                </div>
+
+                <div class="form_control ">
+                    <input placeholder=" " type="email" name="email"   id="email">
+                    <label id="email_label" for="email">Email address</label>
+                </div>
+
+                <div class="form_control">
+                    <input placeholder=" "  type="text" name="phone" id="phone">
+                    <label id="phone_label" for="phone">Phone number</label>
+  
+                </div>
+
+                <div class="form_control">
+                    <input placeholder=" "  onfocus="(this.type='date')" onblur="(this.type='text')" type="text" name="date" id="date" >
+                    <label id="date_label" for="date">Date of birth</label>
+  
+                </div>
+
+                <div class="buttons">
+                    
+                    <a href="/index.html">Back</a>
+                    <button type="submit" id="next">Next<img src="/resources/svg/arrow.svg" alt=""></button>
+                </div>
+                
+                
+
+
+            </form>
+        </div>
+
+    </div>
+</div>
+<script src="/js/registration.js"></script>
+</body>
+</html>

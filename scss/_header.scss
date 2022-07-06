@@ -1,0 +1,11 @@
+@use './_globals.scss' as g;
+
+header{
+    width: 923px;
+    height: 84px;
+    background-color: #7025FB;
+    @include g.flex($justify:flex-start);
+    img {
+        margin-left:60px; 
+    }
+}
