@@ -60,10 +60,10 @@ function checkInputs(){
 	}
 //date validation
 if(dateVal === '') {
-    setErrorFor(date, 'Invalid date' ,'Number cannot be blank');
+    setErrorFor(date, 'Invalid date' ,'date cannot be blank');
 
 } else if (dateReg == false ){
-    setErrorFor(date, 'Invalid date' ,'Please enter valid date number ');
+    setErrorFor(date, 'Invalid date' ,'Please enter valid date ');
 }
 
 else {
