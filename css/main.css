@@ -23,6 +23,10 @@ a {
   transition: 5s all ease-in-out;
 }
 
+.none {
+  display: none !important;
+}
+
 header {
   width: 923px;
   height: 84px;

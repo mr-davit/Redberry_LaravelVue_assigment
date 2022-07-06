@@ -35,6 +35,18 @@
             <p>Start creating your account</p>
         </header>
         <div class="reg_container">
+
+            <table class="error_window none" id="error">
+                <tbody>
+                <tr> 
+                <td id="error_type"><img src="/resources/svg/error.svg" alt=""> <p id="error_exp">kargi</p> <br></td>
+                </tr>
+                <tr>
+                <td id="error_solve"></td>
+                </tr>
+                </tbody>
+            </table>
+
             <div class="navigation">
 
                 <div class=" nav_box personal">
@@ -57,30 +69,33 @@
 
             <form action="" class="reg_form" id="reg_form">
 
-                <div class="form_control">
-                    <input type="text" name="username" id="username">
-                    <label class="username_label" for="username">Name</label>
+                <div class="form_control ">
+                    <input class="" placeholder=" "  type="text" name="username" id="username">
+                    <label id="username_label" for="username">Name</label>
+  
+                </div>
+
+                <div class="form_control ">
+                    <input placeholder=" " type="email" name="email"   id="email">
+                    <label id="email_label" for="email">Email address</label>
                 </div>
 
                 <div class="form_control">
-                    <input type="email" name="email" id="email">
-                    <label class="email_label" for="email">Email address</label>
+                    <input placeholder=" "  type="text" name="phone" id="phone">
+                    <label id="phone_label" for="phone">Phone number</label>
+  
                 </div>
 
                 <div class="form_control">
-                    <input type="text" name="phone" id="phone">
-                    <label class="phone_label" for="phone">Phone number</label>
-                </div>
-
-                <div class="form_control">
-                    <input type="text" name="date" id="date" >
-                    <label class="date_label" for="date">Date of birth</label>
+                    <input placeholder=" "  onfocus="(this.type='date')" onblur="(this.type='text')" type="text" name="date" id="date" >
+                    <label id="date_label" for="date">Date of birth</label>
+  
                 </div>
 
                 <div class="buttons">
                     
                     <a href="/index.html">Back</a>
-                    <a href="/experience.html" id="next">Next <img src="/resources/svg/arrow.svg" alt=""></a>
+                    <button type="submit" id="next">Next<img src="/resources/svg/arrow.svg" alt=""></button>
                 </div>
                 
                 
@@ -91,6 +106,6 @@
 
     </div>
 </div>
-
+<script src="/js/registration.js"></script>
 </body>
 </html>

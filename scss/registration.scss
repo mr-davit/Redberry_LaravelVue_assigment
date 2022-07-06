@@ -62,6 +62,50 @@
             margin-left: 48px;
             width: 775px;
             height: calc(100vh - 84px);
+            position: relative;
+
+            #error{
+                // display: none;
+                position: absolute;
+                width: 350px;
+                height: 87px;
+                top: 150px;
+                right: -130px;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+                border-radius: 4px;
+                td{
+                    vertical-align: middle;
+                    line-height: 20px;
+                    text-indent: 10px;
+                }
+                #error_type{
+                    
+                    border-bottom: 1px solid rgba(185, 180, 196, 0.3);
+                    display: flex;
+                    align-items: center;
+                    padding: 10px;
+
+
+                #error_exp{
+                    font-family: 'Open Sans';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 21px;
+                    color: red;
+                }
+
+                }
+
+                #error_solve{
+
+                    font-family: 'Open Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 150%;
+                }
+            }
             .navigation{
                 display: flex;
                 justify-content: space-between;
@@ -142,10 +186,34 @@
             .reg_form{
                 width: 100%;
 
+                .success {
+
+                    &::after {
+                        content: url('/resources/svg/check.svg');
+                        position: absolute;
+                        top: 50%;
+                        right: 10px;
+                        transform: translateY(-50%);
+                    }
+                }
+
                 .form_control{
                     margin-bottom: 30px;
                     position: relative;
 
+                    // &::after {
+                    //     content: url('/resources/svg/check.svg');
+                    //     position: absolute;
+                    //     top: 50%;
+                    //     right: 10px;
+                    //     transform: translateY(-50%);
+                    // }
+
+                    .error {
+
+                        background-color: #FFEFEF;
+                        color: #DC3545;
+                    }
                     input{
                         all:unset;
                         height: 40px;
@@ -153,12 +221,23 @@
                         border-bottom:1px solid rgba(185, 180, 196, 0.3); ;
                         outline: none;
                         width: 100%;
+                        background-color: white;
+                        font-family: 'Open Sans';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 150%;
+                        text-indent: 10px;
                     }
+                        input:focus ~ label,
+                        input:not(:placeholder-shown) ~ label {
+                        z-index: -1;
+                        }
 
                     label{
                         position: absolute;
                         top: 50%;
-                        left: 0;
+                        left: 10px;
                         transform: translateY(-50%);
                         font-family: 'Open Sans';
                         font-style: normal;
@@ -177,16 +256,21 @@
                     
                     }
 
+                    .error{
+                        color: #DC3545;
+                    }
+
 
 
                 }
 
                 .buttons{
                     width: 100%;
+                    margin-top: 88px;
                     display: flex;
                     justify-content: space-between;
 
-                    a {              
+                    a, button {              
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -209,12 +293,17 @@
                         color: #fff;
 
                         img{
-                            height: 50%;
+                            height: 20px;
                             padding-left: 15px;
                             
                         }
 
+                        &:hover{
+                            border: 4px solid rgba(194, 165, 249, 0.8);
+                            box-sizing: border-box;
+                        }
                     }
+
             }
         }
     }
