@@ -38,6 +38,185 @@
     }
 
     .right_side{
+        header{
+            width: 997px;
+            border: 1px solid rgba(185, 180, 196, 0.3);
+            display: flex;
+            align-items: center;
+            background-color: white;
+            p {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 150%;
+                /* identical to box height, or 24px */
 
+                text-transform: capitalize;
+                padding-left: 48px;
+            }
+        }
+        
+        .reg_container{
+            @include g.flexc($align:flex-start, $justify:space-around);
+            margin-left: 48px;
+            width: 775px;
+            height: calc(100vh - 84px);
+            .navigation{
+                display: flex;
+                justify-content: space-between;
+                width: 366px;
+                position: relative;
+
+                .line {
+                    position: absolute;
+                    width: 47%;
+                    height: 50%;
+                    border-bottom: 1px solid rgba(185, 180, 196, 0.3);
+                    top: 4%;
+                    left: 52%;
+                    transform: translate(-50%,-50%)
+
+                }
+                .nav_box{
+
+                    @include g.flexc;
+                    height: 65px;
+                    
+                    .nav_anc{
+                        display: block;
+                        width: 40px;
+                        height: 40px;
+                        border: 1px solid #E5E6E8;
+                        border-radius: 8px;
+                        margin-bottom: 8px;
+                        background-color: white;
+                        z-index: 100;
+                        font-family: 'Open Sans';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 40px;
+                        text-align: center;
+                        
+                    }
+                    .nav_par {
+                        font-family: 'Open Sans';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 150%;
+                    }
+                }
+
+                #experience_anc {
+
+                    background-color: #F5F5F5;
+                    color: #95939A;
+
+                }
+            }
+
+
+            .reg_title{
+                height: auto;
+                h1{
+                    font-family: 'Open Sans';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 32px;
+                    line-height: 150%;
+                }
+                p{
+                    font-family: 'Open Sans';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 150%;
+                    text-transform: capitalize;
+                    color: #95939A;
+                }
+
+            }
+
+            .reg_form{
+                width: 100%;
+
+                .form_control{
+                    margin-bottom: 30px;
+                    position: relative;
+
+                    input{
+                        all:unset;
+                        height: 40px;
+                        box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.125);
+                        border-bottom:1px solid rgba(185, 180, 196, 0.3); ;
+                        outline: none;
+                        width: 100%;
+                    }
+
+                    label{
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        font-family: 'Open Sans';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 150%;
+                        visibility: visible;
+
+
+                    }
+                    label::after{
+                        content: "*";
+                        color: red;
+                    }
+                    
+                    
+                    }
+
+
+
+                }
+
+                .buttons{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    a {              
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #ffffff;
+                        border-radius: 8px;
+                        border: #212529 solid 1px;
+                        width: 191px;
+                        height: 53px;
+                        text-align: center ;
+                        font-family: 'Open Sans';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 27px;
+                        text-transform: capitalize;
+
+                    }
+                    #next{
+                        background-color: #212529;
+                        color: #fff;
+
+                        img{
+                            height: 50%;
+                            padding-left: 15px;
+                            
+                        }
+
+                    }
+            }
+        }
     }
 }
+
