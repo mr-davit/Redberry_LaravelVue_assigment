@@ -6,13 +6,48 @@ const date = document.getElementById('date');
 
 // console.log(username);
 
+form.addEventListener('keyup', e =>
+{
+    const usernameVal  = username.value.trim();
+    const emailVal     = email.value.trim();
+    const phoneVal     = phone.value.trim(); 
+    const dateVal      = date.value.trim();
+    window.localStorage.setItem('username', usernameVal);
+    window.localStorage.setItem('email', emailVal);
+    window.localStorage.setItem('phone', phoneVal);
+    window.localStorage.setItem('date_of_birth', dateVal);
+}
+
+)
+
+// window.localStorage.setItem('username', usernameVal);
+// window.localStorage.setItem('email', emailVal);
+// window.localStorage.setItem('phone', phoneVal);
+// window.localStorage.setItem('date_of_birth', dateVal);
+
+const userLocal = window.localStorage.getItem('username');
+const emailLocal = window.localStorage.getItem('email');
+const phoneLocal = window.localStorage.getItem('phone');
+const dateLocal = window.localStorage.getItem('date_of_birth');
+
+
+
+window.onload = (event) => {
+    username.value = userLocal;
+    email.value= emailLocal;
+    phone.value=phoneLocal;
+    date.value=dateLocal;
+
+};
+
+
 form.addEventListener('submit', e => {
 	e.preventDefault();
 	
 	checkInputs();
 });
 
-function checkInputs(){
+function checkInputs(){ 
  
     const usernameVal  = username.value.trim();
     const emailVal     = email.value.trim();
@@ -21,9 +56,10 @@ function checkInputs(){
     let userReg =  /^[a-zA-Z]+$/.test(usernameVal);
     let emailReg= /^[^\s@]+@redberry.ge$/.test(emailVal);
     let phoneReg= /^[0-9]{9}$/.test(phoneVal);
-    let dateReg= /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/.test(dateVal);
+    let dateReg= /^\d{4}-\d{2}-\d{2}$/.test(dateVal);
     const errorWindow = document.getElementById('error');
     let called = 1  ;
+
 
     //username validation
     if(usernameVal === '') {
@@ -36,6 +72,8 @@ function checkInputs(){
     else {
 		setSuccessFor(username);
 	}
+
+
     //email validation
     if(emailVal === '') {
 		setErrorFor(email, 'Invalid email' ,'email cannot be blank');
@@ -46,6 +84,8 @@ function checkInputs(){
     else {
 		setSuccessFor(email);
 	}
+
+
 
     //phone number validation 
     if(phoneVal === '') {
@@ -58,21 +98,23 @@ function checkInputs(){
     else {
 		setSuccessFor(phone);
 	}
-//date validation
-if(dateVal === '') {
-    setErrorFor(date, 'Invalid date' ,'date cannot be blank');
-
-} else if (dateReg == false ){
-    setErrorFor(date, 'Invalid date' ,'Please enter valid date ');
-}
-
-else {
-    setSuccessFor(date);
-}
 
 
+    //date validation
+    if(dateVal === '') {
+        setErrorFor(date, 'Invalid date' ,'date cannot be blank');
 
-    //ser error and succes functions
+    } else if (dateReg == false ){
+        setErrorFor(date, 'Invalid date' ,'Please enter valid date ');
+    }
+
+    else {
+        setSuccessFor(date);
+    }
+
+
+
+    //set error and success functions
     function setErrorFor(input, type, solve) {
         const formControl = input.parentElement;
         formControl.className = 'form_control';
@@ -99,10 +141,14 @@ else {
         
     }
 
+
+    // error window and navigation style
     if (called  < 5) {
         errorWindow.className = 'error_window';
+    } else {
+        document.getElementById('personal_anc').innerText = ' ';
+        document.getElementById('personal_anc').className = 'nav_anc anc_bg';
     }
 
-    // console.log(called);
-}
 
+}
