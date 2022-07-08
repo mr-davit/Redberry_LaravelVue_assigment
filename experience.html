@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redberry Knight Cup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="/css/experience.css">
+</head>
+
+<body>
+    
+<div class="page_container">
+    <div class="left_side">
+        <header>
+                <a href="/index.html"><img src="/resources/svg/logo.svg" alt=""></a>
+        </header>
+
+        <div class="landing">
+            <div class="landing_txt">
+                <h1>“Many have become chess masters;<br> 
+                    no one has become the master of chess.”
+                    </h1>
+                <p>- Siegbert Tarrasch</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="right_side">
+        <header>
+            <p>First step is done, continue to finish onboarding</p>
+        </header>
+        <div class="reg_container">
+
+            <table class="error_window none" id="error">
+                <tbody>
+                <tr> 
+                <td id="error_type"><img src="/resources/svg/error.svg" alt=""> <p id="error_exp">kargi</p> <br></td>
+                </tr>
+                <tr>
+                <td id="error_solve"></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="navigation">
+
+                <div class=" nav_box personal">
+                    <a id="personal_anc" class="nav_anc anc_bg" href="/registration.html"></a>
+                    <p class="nav_par">Personal information</p>
+                </div>
+
+                <div class="line"></div>
+
+                <div class=" nav_box experiance">
+                    <a id="experience_anc" class="nav_anc" href="/experience.html">2</a>
+                    <p class="nav_par">Chess experience</p>
+                </div>
+            </div>
+
+            <div class="reg_title">
+                <h1>Chess experience</h1>
+                <p>This is basic informaton fields</p>
+            </div>
+
+            <div class="selectors">
+                <div class="experience_dropdown dropdown">
+                    <button onclick="myFunction()" id="dropBtn" class="dropbtn">level of knowledge<p>*</p></button>
+                    <div id="myDropdown" class="dropdown-content">
+                    <a onclick="setExperience(this.id)" id="beginner" href="#">Beginner</a>
+                    <a onclick="setExperience(this.id)"id="intermediate" href="#">Intermediate</a>
+                    <a onclick="setExperience(this.id)"id="professional" href="#">Professional</a>
+                    </div>
+                </div>
+
+                <div class="grandmaster_dropdown dropdown">
+                <button onclick="myFunctionGrand()" id="dropBtn_grand" class="dropbtn">level of knowledge<p>*</p></button>
+                <div id="myDropdownGrand" class="dropdown-content">
+                    <a  href="#">Beginner</a>
+                    <a  href="#">Beginner</a>
+                    <a  href="#">Beginner</a>
+                    
+                </div>
+                </div>
+
+            </div>
+
+
+                <div class="buttons">
+                    
+                    <a href="/index.html">Back</a>
+                    <button type="submit" id="next">Next<img src="/resources/svg/arrow.svg" alt=""></button>
+                </div>
+                
+                
+
+
+            </form>
+        </div>
+
+    </div>
+</div>
+<script src="/js/experience.js"></script>
+</body>
+</html>

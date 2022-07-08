@@ -4,7 +4,47 @@ const email = document.getElementById('email');
 const phone = document.getElementById('phone');
 const date = document.getElementById('date');
 
-// console.log(username);
+
+// save input in local storage
+form.addEventListener('keyup', e =>
+{
+    const usernameVal  = username.value.trim();
+    const emailVal     = email.value.trim();
+    const phoneVal     = phone.value.trim(); 
+    const dateVal      = date.value.trim();
+    window.localStorage.setItem('username', usernameVal);
+    window.localStorage.setItem('email', emailVal);
+    window.localStorage.setItem('phone', phoneVal);
+    window.localStorage.setItem('date_of_birth', dateVal);
+    window.sessionStorage.setItem('1','1');
+    document.getElementById('personal_anc').style.backgroundColor = '#E9FAF1';
+
+}
+
+)
+
+
+const userLocal = window.localStorage.getItem('username');
+const emailLocal = window.localStorage.getItem('email');
+const phoneLocal = window.localStorage.getItem('phone');
+const dateLocal = window.localStorage.getItem('date_of_birth');
+
+
+//load content from local storage when reloading page
+window.onload = (event) => {
+    let checkClose = window.sessionStorage.getItem('1');
+    console.log(checkClose);
+    if (checkClose == 1 ) {
+    document.getElementById('personal_anc').style.backgroundColor = '#E9FAF1';
+    username.value = userLocal;
+    email.value= emailLocal;
+    phone.value=phoneLocal;
+    date.value=dateLocal;
+    } else{
+        window.localStorage.clear();
+    }
+};
+
 
 form.addEventListener('submit', e => {
 	e.preventDefault();
@@ -12,7 +52,7 @@ form.addEventListener('submit', e => {
 	checkInputs();
 });
 
-function checkInputs(){
+function checkInputs(){ 
  
     const usernameVal  = username.value.trim();
     const emailVal     = email.value.trim();
@@ -21,13 +61,14 @@ function checkInputs(){
     let userReg =  /^[a-zA-Z]+$/.test(usernameVal);
     let emailReg= /^[^\s@]+@redberry.ge$/.test(emailVal);
     let phoneReg= /^[0-9]{9}$/.test(phoneVal);
-    let dateReg= /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/.test(dateVal);
+    let dateReg= /^\d{4}-\d{2}-\d{2}$/.test(dateVal);
     const errorWindow = document.getElementById('error');
     let called = 1  ;
 
+
     //username validation
     if(usernameVal === '') {
-		setErrorFor(username, 'Invalid Username' ,'Username cannot be blank');
+		setErrorFor(username,   'Invalid Username' ,'Username cannot be blank');
  
 	} else if (userReg == false ){
         setErrorFor(username, 'Invalid Username' ,'Username only can contain string');
@@ -36,9 +77,11 @@ function checkInputs(){
     else {
 		setSuccessFor(username);
 	}
+
+
     //email validation
     if(emailVal === '') {
-		setErrorFor(email, 'Invalid email' ,'email cannot be blank');
+		setErrorFor(email,'Invalid email' ,'email cannot be blank');
 	} else if (emailReg == false ){
         setErrorFor(email, 'Invalid email' ,'Please enter valid email address');
     }
@@ -46,6 +89,8 @@ function checkInputs(){
     else {
 		setSuccessFor(email);
 	}
+
+
 
     //phone number validation 
     if(phoneVal === '') {
@@ -58,21 +103,23 @@ function checkInputs(){
     else {
 		setSuccessFor(phone);
 	}
-//date validation
-if(dateVal === '') {
-    setErrorFor(date, 'Invalid date' ,'date cannot be blank');
-
-} else if (dateReg == false ){
-    setErrorFor(date, 'Invalid date' ,'Please enter valid date ');
-}
-
-else {
-    setSuccessFor(date);
-}
 
 
+    //date validation
+    if(dateVal === '') {
+        setErrorFor(date, ' Invalid date\r\n' ,'date cannot be blank');
 
-    //ser error and succes functions
+    } else if (dateReg == false ){
+        setErrorFor(date, 'Invalid date' ,'Please enter valid date ');
+    }
+
+    else {
+        setSuccessFor(date);
+    }
+
+
+
+    //set error and success functions
     function setErrorFor(input, type, solve) {
         const formControl = input.parentElement;
         formControl.className = 'form_control';
@@ -80,8 +127,8 @@ else {
 
     
         
-        let errorType = document.getElementById('error_exp');
-        let errorSolve = document.getElementById('error_solve');
+        const errorType = document.getElementById('error_exp');
+        const errorSolve = document.getElementById('error_solve');
         input.className = 'error';
         errorWindow.className = 'error_window';
   
@@ -99,10 +146,19 @@ else {
         
     }
 
+
+    // error window and navigation style
     if (called  < 5) {
         errorWindow.className = 'error_window';
+    } else {
+        document.getElementById('personal_anc').innerText = ' ';
+        document.getElementById('personal_anc').className = 'nav_anc anc_bg';
+        window.location.replace("/experience.html");
     }
 
-    // console.log(called);
+
+
+
 }
+
 
