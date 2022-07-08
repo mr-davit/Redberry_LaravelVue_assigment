@@ -78,12 +78,13 @@
                     </div>
                 </div>
 
-                <div class="grandmaster_dropdown dropdown">
-                <button onclick="myFunctionGrand()" id="dropBtn_grand" class="dropbtn">level of knowledge<p>*</p></button>
-                <div id="myDropdownGrand" class="dropdown-content">
+                <div class="grandmaster_dropdown popup dropdown">
+                <button onclick="myFunctionGrand()" id="dropBtn_grand" class="dropbtnGrand">level of knowledge<p>*</p></button>
+                <div id="myDropdownGrand" class="dropdownGrand-content">
+                    <a id="maia" onclick="getGrandmaster(this.id)" href="#">Beginner</a>
                     <a  href="#">Beginner</a>
                     <a  href="#">Beginner</a>
-                    <a  href="#">Beginner</a>
+                    <a id="4" onclick="getGrandmaster(this.id)" href="#"><p>Magnus Carlsen</p><img src="https://chess-tournament-api.devtest.ge/api/grandmasters/images/magnus.jpg" alt="">  </a>
                     
                 </div>
                 </div>

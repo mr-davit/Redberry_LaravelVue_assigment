@@ -154,6 +154,7 @@ function checkInputs(){
         document.getElementById('personal_anc').innerText = ' ';
         document.getElementById('personal_anc').className = 'nav_anc anc_bg';
         window.location.replace("/experience.html");
+        console.log("mushaobs")
     }
 
 
