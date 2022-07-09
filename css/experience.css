@@ -334,4 +334,24 @@ header img {
 .page_container .right_side .reg_container .buttons #next:hover {
   border: 4px solid rgba(194, 165, 249, 0.8);
   box-sizing: border-box;
+}
+
+#myDropdownGrand {
+  padding-top: 20px;
+}
+#myDropdownGrand .GrandmasterA {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+}
+#myDropdownGrand .GrandmasterA img {
+  height: 72px;
+  width: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=experience.css.map */

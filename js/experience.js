@@ -1,3 +1,4 @@
+
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
@@ -59,17 +60,29 @@ function myFunctionGrand() {
   }
 
   
-  fetch("https://chess-tournament-api.devtest.ge/api/grandmasters")
-    .then(response=>{
-      if (!response.ok){
-        throw Error ('Api Is Not Answering')
-      } return response.json();
-    }).then(data=> {
-      
-      console.log(data);
-      console.log("ეს არის დატას ლოგო")
-      console.log(typeof(data));
-      console.log("ეს არის typeofდატას ლოგო")
+  let array = [];  
+  let a = [];
+  fetch("https://chess-tournament-api.devtest.ge/api/grandmasters", {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    }) 
+      .then(response=>{
+        if (!response.ok){
+          throw Error ('Api Is Not Answering')
+        } return response.json();
+      }).then(data=> {
+        array = data.map(obj => {
+          return obj
+         })
+     
+      a = array.forEach(element => {
+        document.getElementById("myDropdownGrand").innerHTML += '<a id="' + element.id + '" class="GrandmasterA" onclick="getGrandmaster(this.innerText)" href="#">'+ element.name + '<img src="https://chess-tournament-api.devtest.ge' + element.image + '" alt="">'   +  '</a>';
+      });
+     
+     console.log(a);
+  });
     //   for (var i = 0; i < Object.keys(data).length; i++) {
     //     let kote = (Object.values(data[i]));
     //     console.log(data+"ეს არის დატას ლოგი");
@@ -83,7 +96,7 @@ function myFunctionGrand() {
     //   }
 
 
-      });
+  
 
 
       // for (var i = 0; i < Object.keys(kote).length; i++) {

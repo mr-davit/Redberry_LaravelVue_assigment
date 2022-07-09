@@ -257,6 +257,7 @@
                     .dropdown, .grandmaster_dropdown {
                         position: relative;
                         display: inline-block;
+                        
                     }
                     
                     /* Dropdown Content (Hidden by Default) */
@@ -341,3 +342,23 @@
     }
 }
 
+#myDropdownGrand {
+    padding-top: 20px;
+    .GrandmasterA {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+        
+        
+        img{
+            height: 72px;
+            width: 100px;
+            object-fit: cover;
+        }
+    }
+}
