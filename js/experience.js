@@ -1,4 +1,4 @@
-
+// open the dropdown menu when user clicks on button
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
@@ -15,22 +15,17 @@ function myFunction() {
         }
       }
     } 
-    
+      // Close the dropdownGrand menu if the user clicks outside of it
+
     if  (!event.target.matches('.dropbtnGrand')) {
       var dropdownsGrand = document.getElementById("myDropdownGrand");
-        // var i;
-        // for (i = 0; i < dropdownsGrand.length; i++) {
-        //   var openDropdownGrand = dropdownsGrand[k];
-        //   if (openDropdownGrand.classList.contains('show')) {
-        //     openDropdownGrand.classList.remove('show');
-        //   }
-        // }
         if (dropdownsGrand.classList.contains('show')){
           dropdownsGrand.classList.remove('show');
         }
     }
   }
-  
+
+  // open the dropdownGrand menu when user clicks on button
 function myFunctionGrand() {
     document.getElementById("myDropdownGrand").classList.toggle("show");
   }
@@ -38,7 +33,7 @@ function myFunctionGrand() {
 
 
 
-
+//save user select for experience in local storage
   function setExperience(id) {
     console.log(id);
     window.localStorage.setItem('experience_level', id);
@@ -47,11 +42,14 @@ function myFunctionGrand() {
     dropBtn.style.textTransform = "capitalize"
     
     console.log(window.localStorage.getItem('experience_level'));
+    document.getElementById('experience_anc').style.backgroundColor = '#E9FAF1';
+
   }
 
-  function getGrandmaster(id) {
+//save user select for Grandmaster in local storage
+  function getGrandmaster(id,master) {
     console.log(id);
-    window.localStorage.setItem('master', id);
+    window.localStorage.setItem('master', master);
     let dropBtn = document.getElementById("dropBtn_grand");
     dropBtn.innerText = id;
     dropBtn.style.textTransform = "capitalize"
@@ -78,7 +76,7 @@ function myFunctionGrand() {
          })
      
       a = array.forEach(element => {
-        document.getElementById("myDropdownGrand").innerHTML += '<a id="' + element.id + '" class="GrandmasterA" onclick="getGrandmaster(this.innerText)" href="#">'+ element.name + '<img src="https://chess-tournament-api.devtest.ge' + element.image + '" alt="">'   +  '</a>';
+        document.getElementById("myDropdownGrand").innerHTML += '<a id="' + element.id + '" class="GrandmasterA" onclick="getGrandmaster(this.innerText,this.id)" href="#">'+ element.name + '<img src="https://chess-tournament-api.devtest.ge' + element.image + '" alt="">'   +  '</a>';
       });
      
      console.log(a);
