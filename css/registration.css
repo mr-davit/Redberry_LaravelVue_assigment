@@ -115,7 +115,7 @@ header img {
 .page_container .right_side .reg_container #error td {
   vertical-align: middle;
   line-height: 20px;
-  text-indent: 10px;
+  padding: 10px;
 }
 .page_container .right_side .reg_container #error #error_type {
   border-bottom: 1px solid rgba(185, 180, 196, 0.3);
@@ -132,6 +132,7 @@ header img {
   line-height: 21px;
   color: red;
   white-space: pre-line;
+  margin-left: 10px;
 }
 .page_container .right_side .reg_container #error #error_solve {
   font-family: "Open Sans";

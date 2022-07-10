@@ -1,6 +1,6 @@
 @use './_globals.scss' as g;
 @use './_header.scss';
-
+@use'./_radio.scss';
 .page_container{
     display: flex;
     .left_side{

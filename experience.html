@@ -58,7 +58,7 @@
                 <div class="line"></div>
 
                 <div class=" nav_box experiance">
-                    <a id="experience_anc" class="nav_anc" href="/experience.html">2</a>
+                    <a id="experience_anc" class="nav_anc" href="#">2</a>
                     <p class="nav_par">Chess experience</p>
                 </div>
             </div>
@@ -72,14 +72,14 @@
                 <div class="experience_dropdown dropdown">
                     <button onclick="myFunction()" id="dropBtn" class="dropbtn">level of knowledge<p>*</p></button>
                     <div id="myDropdown" class="dropdown-content">
-                    <a onclick="setExperience(this.id)" id="beginner" href="#">Beginner</a>
-                    <a onclick="setExperience(this.id)"id="intermediate" href="#">Intermediate</a>
-                    <a onclick="setExperience(this.id)"id="professional" href="#">Professional</a>
+                    <a onclick="setExperience(this.id,this.innerText)" id="beginner" href="#">Beginner</a>
+                    <a onclick="setExperience(this.id,this.innerText)"id="intermediate" href="#">Intermediate</a>
+                    <a onclick="setExperience(this.id,this.innerText)"id="professional" href="#">Professional</a>
                     </div>
                 </div>
 
                 <div class="grandmaster_dropdown popup dropdown">
-                <button onclick="myFunctionGrand()" id="dropBtn_grand" class="dropbtnGrand">level of knowledge<p>*</p></button>
+                <button onclick="myFunctionGrand()" id="dropBtn_grand" class="dropbtnGrand">Choose your character<p>*</p></button>
                 <div id="myDropdownGrand" class="dropdownGrand-content">
                    
                     
@@ -88,11 +88,28 @@
 
             </div>
 
+            <p>Have you participated in the Redberry Championship? <i style="color:Red;">*</i></p>
+            <div class="control-group">
+
+                <label onclick="window.localStorage.setItem('participated' , 'true')"  class="control control-radio">
+                    Yes
+                    <input id="true" type="radio" name="radio" checked="" />
+
+                    <div   class="control_indicator"></div>
+                </label>
+
+                <label onclick="window.localStorage.setItem('participated' , 'false')" class="control control-radio">
+                    No
+                        <input id="false"  type="radio" name="radio" checked="" />
+                    <div   class="control_indicator"></div>
+                </label>
+            
+            </div>
 
                 <div class="buttons">
                     
-                    <a href="/index.html">Back</a>
-                    <button type="submit" id="next">Next<img src="/resources/svg/arrow.svg" alt=""></button>
+                    <a href="/registration.html">Back</a>
+                    <button type="submit" onclick="checkRegistration()" id="next">Next<img src="/resources/svg/arrow.svg" alt=""></button>
                 </div>
                 
                 
