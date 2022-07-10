@@ -7,7 +7,7 @@
 
         .landing{
             @include g.bgimg;
-            background-image: url("/resources/img/done_left_Cont.png");
+            background-image: url("../resources/img/done_left_Cont.png");
             height: calc(100vh - 84px);
 
             &_txt {

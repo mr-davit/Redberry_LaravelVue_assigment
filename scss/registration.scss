@@ -8,7 +8,7 @@
 
         .landing{
             @include g.bgimg;
-            background-image: url("/resources/img/reg_cont.png");
+            background-image: url("../resources/img/reg_cont.png");
             height: calc(100vh - 84px);
 
             &_txt {
@@ -151,7 +151,7 @@
                     }
 
                     .anc_bg{
-                        background-image: url(/resources/svg/success.svg);
+                        background-image: url(../resources/svg/success.svg);
                         background-position: center;
                         background-repeat: no-repeat;
                         background-color: #E9FAF1;
@@ -202,7 +202,7 @@
                 .success {
 
                     &::after {
-                        content: url('/resources/svg/check.svg');
+                        content: url('../resources/svg/check.svg');
                         position: absolute;
                         top: 50%;
                         right: 10px;

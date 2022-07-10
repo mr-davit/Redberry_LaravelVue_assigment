@@ -218,7 +218,7 @@ header img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/resources/img/exp_cont.png");
+  background-image: url("../resources/img/exp_cont.png");
   height: calc(100vh - 84px);
 }
 .page_container .left_side .landing_txt {
@@ -346,7 +346,7 @@ header img {
   text-align: center;
 }
 .page_container .right_side .reg_container .navigation .nav_box .anc_bg {
-  background-image: url(/resources/svg/success.svg);
+  background-image: url(../resources/svg/success.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-color: #E9FAF1;
@@ -422,7 +422,7 @@ header img {
   content: "";
   position: absolute;
   margin-left: 40%;
-  background-image: url("/resources/svg/select_arrow.svg");
+  background-image: url("../resources/svg/select_arrow.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;

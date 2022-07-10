@@ -51,7 +51,7 @@ header img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/resources/img/done_left_Cont.png");
+  background-image: url("../resources/img/done_left_Cont.png");
   height: calc(100vh - 84px);
 }
 .page_container .left_side .landing_txt {

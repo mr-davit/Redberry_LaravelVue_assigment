@@ -7,7 +7,7 @@
 
         .landing{
             @include g.bgimg;
-            background-image: url("/resources/img/landing1.png");
+            background-image: url("../resources/img/landing1.png");
             height: calc(100vh - 84px);
         }
     }
@@ -53,7 +53,7 @@
             
         }
         a:after {
-            content:url('/resources/svg/landing_arrow.svg');
+            content:url('../resources/svg/landing_arrow.svg');
             position: absolute;
             transform: translate(-50%,-50%);
             top: 50%;

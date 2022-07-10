@@ -51,7 +51,7 @@ header img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/resources/img/reg_cont.png");
+  background-image: url("../resources/img/reg_cont.png");
   height: calc(100vh - 84px);
 }
 .page_container .left_side .landing_txt {
@@ -180,7 +180,7 @@ header img {
   text-align: center;
 }
 .page_container .right_side .reg_container .navigation .nav_box .anc_bg {
-  background-image: url(/resources/svg/success.svg);
+  background-image: url(../resources/svg/success.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-color: #E9FAF1;
@@ -220,7 +220,7 @@ header img {
   width: 100%;
 }
 .page_container .right_side .reg_container .reg_form .success::after {
-  content: url("/resources/svg/check.svg");
+  content: url("../resources/svg/check.svg");
   position: absolute;
   top: 50%;
   right: 10px;

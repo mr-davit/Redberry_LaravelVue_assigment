@@ -51,7 +51,7 @@ header img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/resources/img/landing1.png");
+  background-image: url("../resources/img/landing1.png");
   height: calc(100vh - 84px);
 }
 .page_container .right_side {
@@ -93,7 +93,7 @@ header img {
   height: 53px;
 }
 .page_container .right_side a:after {
-  content: url("/resources/svg/landing_arrow.svg");
+  content: url("../resources/svg/landing_arrow.svg");
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;

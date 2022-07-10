@@ -27,14 +27,7 @@ let submited = "";
 
 let checkClose = '';
 
-// form.addEventListener('keypress',  e =>
-
-// {
-    
-//     checkInputsOnChange();
-// }
-
-// )
+// check form values on input
 
 form.addEventListener('input',  e =>{
     setLocal();
@@ -44,6 +37,7 @@ form.addEventListener('input',  e =>{
 
 )
 
+//trim input values and store in localstorage
 function setLocal (){
     usernameVal  = username.value.trim();
     emailVal     = email.value.trim();
@@ -84,6 +78,8 @@ window.onload = (event) => {
 };
 
 
+//fire event if form is submited and one last check for values. if Correct, redirect to experience page
+
 form.addEventListener('submit', e => {
 	e.preventDefault();
 	
@@ -94,12 +90,7 @@ form.addEventListener('submit', e => {
     checkInputsOnChange('date');
 
  
-  
- 
-// if (window.getElementById('error').className == "error_window"  ) {
-//     errorWindow.className = "error_window";
-// }
-//  else 
+
 
 
  if ( ( setinputname == true && setinputemail == true && setinputphone == true && setinputdate == true 
@@ -121,11 +112,8 @@ form.addEventListener('submit', e => {
 
 
 
-// let userReg =  /^[a-zA-Z]{3,}$/.test(userLocal);
-// let emailReg= /^[^\s@]+@redberry.ge$/.test(emailLocal);
-// let phoneReg= /^[0-9]{9}$/.test(phoneLocal);
-// let dateReg= /^\d{4}-\d{2}-\d{2}$/.test(dateLocal);
 
+// check input when typing
 
 function checkInputsOnChange(id){ 
 
@@ -201,6 +189,8 @@ function checkInputsOnChange(id){
 }
 
 
+//check input on submit 
+
 function checkInputsOnSubmit(){
 
     if( usernameVal.length < 2 && userLocal == null ) {
@@ -255,7 +245,7 @@ function checkInputsOnSubmit(){
 
 
 
-    //set error and success functions
+    //set error and success function
     function setErrorFor(input, type, solve) {
         const formControl = input.parentElement;
         formControl.className = 'form_control';
@@ -270,7 +260,9 @@ function checkInputsOnSubmit(){
         
         
     }
-    
+
+
+    //set  success function
     
     function setSuccessFor(input) {
         const formControl = input.parentElement;
