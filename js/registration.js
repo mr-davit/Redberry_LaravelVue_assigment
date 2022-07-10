@@ -117,7 +117,13 @@ form.addEventListener('submit', e => {
 
 function checkInputsOnChange(id){ 
 
-    let userReg =  /^[a-zA-Z]+$/.test(userLocal);
+    let userReg =  "";
+    if (/^[a-zA-Z]+$/.test(userLocal) == true && userLocal.length > 2) {
+        userReg = true;
+    } else {
+        userReg= false;
+    }
+    
     let emailReg= /^[^\s@]+@redberry.ge$/.test(emailLocal);
     let phoneReg= /^[0-9]{9}$/.test(phoneLocal);
     let dateReg= /^\d{4}-\d{2}-\d{2}$/.test(dateLocal);
@@ -262,7 +268,7 @@ function checkInputsOnSubmit(){
     }
 
 
-    //set  success function
+     //set  success function
     
     function setSuccessFor(input) {
         const formControl = input.parentElement;
