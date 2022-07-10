@@ -57,7 +57,7 @@
                 <div class="line"></div>
 
                 <div class=" nav_box experiance">
-                    <a id="experience_anc" class="nav_anc" href="/experience.html">2</a>
+                    <a id="experience_anc" class="nav_anc" href="">2</a>
                     <p class="nav_par">Chess experience</p>
                 </div>
             </div>
@@ -70,24 +70,24 @@
             <form action="" class="reg_form" id="reg_form">
 
                 <div class="form_control ">
-                    <input class="" placeholder=" "  type="text" name="username" id="username">
+                    <input oninput="setLocal(),checkInputsOnChange(this.id)" class="" placeholder=" "  type="text" name="username" id="username">
                     <label id="username_label" for="username">Name</label>
   
                 </div>
 
                 <div class="form_control ">
-                    <input placeholder=" " type="email" name="email"   id="email">
+                    <input oninput="setLocal(),checkInputsOnChange(this.id)" placeholder=" " type="email" name="email"   id="email">
                     <label id="email_label" for="email">Email address</label>
                 </div>
 
                 <div class="form_control">
-                    <input placeholder=" "  type="text" name="phone" id="phone">
+                    <input oninput="setLocal(),checkInputsOnChange(this.id)" placeholder=" "  type="text" name="phone" id="phone">
                     <label id="phone_label" for="phone">Phone number</label>
   
                 </div>
 
                 <div class="form_control">
-                    <input placeholder=" "  onfocus="(this.type='date')" onblur="(this.type='text')" type="text" name="date" id="date" >
+                    <input oninput="setLocal(),checkInputsOnChange(this.id)" placeholder=" "  onfocus="(this.type='date')" onblur="(this.type='text')" type="text" name="date" id="date" >
                     <label id="date_label" for="date">Date of birth</label>
   
                 </div>
