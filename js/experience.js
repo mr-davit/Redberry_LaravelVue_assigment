@@ -152,7 +152,7 @@ function checkRegistration(){
       return response
     }).then(data=>{
       if (data.status = 201){
-        window.location.replace("/done.html");
+        window.location.replace("https://mr-davit.github.io/Redberry_LaravelVue_assigment/done.html");
         window.localStorage.clear();
         window.sessionStorage.clear();
       } else {
