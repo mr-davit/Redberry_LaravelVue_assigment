@@ -102,7 +102,7 @@ form.addEventListener('submit', e => {
         document.getElementById('personal_anc').innerText = ' ';
         document.getElementById('personal_anc').className = 'nav_anc anc_bg';
         window.sessionStorage.setItem('wasPassed','true');
-        window.location.replace("/experience.html");
+        window.location.replace("https://mr-davit.github.io/Redberry_LaravelVue_assigment/experience.html");
 
         console.log("mushaobs")
     }
